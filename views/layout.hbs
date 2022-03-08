@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script defer src="bootstrap/bootstrap.min.js"></script>
+    <title>navbar active class</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container flex-column">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav d-flex justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link {{#if active.home}} active {{/if}}" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if active.cat}} active {{/if}}" href="/cat">Cat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if active.dog}} active {{/if}}" href="/dog">Dog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{#if active.parrot}} active {{/if}}" href='/parrot'>Parrot</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container d-flex justify-content-center">
+    
+{{{body}}}
+</div>
+</body>
+</html>
